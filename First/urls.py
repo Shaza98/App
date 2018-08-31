@@ -14,9 +14,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-import views
+from django.conf.urls import url, include
+#from django.urls import path
+from.import views
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    url(r'^export/xls/$', views.export_users_xls, name='export_users_xls')
+    url('admin/', admin.site.urls),
+    url(r'^first/', views.index),
 ]
